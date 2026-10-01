@@ -9,10 +9,10 @@
 <link rel="canonical" href="https://refat-75.github.io/">
 <meta property="og:title" content="Md Refat Hossain – Full Stack Developer & UI/UX Designer">
 <meta property="og:description" content="Portfolio of Md Refat Hossain: web, mobile and UI/UX projects.">
-<meta property="og:image" content="https://refat-75.github.io/assets/hero.jpg">
+<meta property="og:image" content="https://refat-75.github.io/hero.jpg">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Md Refat Hossain","jobTitle":"Full Stack Developer & UI/UX Designer","email":"mailto:mdrefathossain705@gmail.com","url":"https://refat-75.github.io/","image":"https://refat-75.github.io/assets/hero.jpg","address":{"@type":"PostalAddress","addressLocality":"Rajshahi","addressCountry":"BD"},"alumniOf":"Varendra University","sameAs":["https://www.linkedin.com/in/md-refat/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Md Refat Hossain","jobTitle":"Full Stack Developer & UI/UX Designer","email":"mailto:mdrefathossain705@gmail.com","url":"https://refat-75.github.io/","image":"https://refat-75.github.io/hero.jpg","address":{"@type":"PostalAddress","addressLocality":"Rajshahi","addressCountry":"BD"},"alumniOf":"Varendra University","sameAs":["https://www.linkedin.com/in/md-refat/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,6 +109,16 @@ h1 span:nth-child(2) b{animation-delay:.15s;color:var(--acc)}
 .pj p{color:var(--mut);font-size:.95rem;flex:1}
 .pj a{color:var(--acc);font-weight:600}
 .pj.hide{display:none}
+.pj{cursor:pointer}.pj .vd{color:var(--acc);font-weight:600}
+.md{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.78);display:grid;place-items:center;padding:20px;backdrop-filter:blur(6px)}
+.md[hidden]{display:none}
+.mb{background:var(--bg2);border:1px solid var(--acc);border-radius:20px;max-width:720px;width:100%;max-height:90vh;overflow:auto;padding:34px;position:relative;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.mb h3{font-size:2.6rem;margin:6px 0 14px}.mb h4{margin:22px 0 8px;color:var(--acc)}
+.mb p{color:var(--mut)}.mb ul{padding-left:20px;color:var(--mut)}
+.mb .wh{color:var(--acc);font-size:.92rem;margin-bottom:12px}.mi{width:100%;border-radius:12px;margin-bottom:18px}
+.mbtn{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:var(--acc);font-size:1.5rem;cursor:pointer}
 /* contact */
 #contact{background:var(--bg2);text-align:center}
 #contact h2{font-size:clamp(3rem,9vw,7.5rem);margin-bottom:20px}
@@ -176,17 +186,33 @@ footer{text-align:center;padding:26px;color:var(--mut);font-size:.9rem;border-to
  <div class="cl"><a class="btn f" href="mailto:mdrefathossain705@gmail.com">mdrefathossain705@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/md-refat/" target="_blank" rel="noopener">LinkedIn</a></div>
 </div></section>
 <footer>© <span id="yr"></span> Md Refat Hossain · Rajshahi, Bangladesh</footer>
+<div class="md" id="md" hidden><div class="mb" role="dialog" aria-modal="true" aria-label="Project details"><button class="x" id="mx" aria-label="Close">×</button><div id="mc"></div></div></div>
 <button class="top" id="top" aria-label="Back to top">↑</button>
 
 <script>
 /* ====== EDIT HERE: your projects ====== */
 const PROJECTS=[
- {t:"Project One",c:"Mobile",d:"Short description: what it does and which tech you used.",l:"#"},
- {t:"Project Two",c:"Full Stack",d:"Short description: what it does and which tech you used.",l:"#"},
- {t:"Project Three",c:"UI/UX",d:"Short description: what it does and which tech you used.",l:"#"},
- {t:"Project Four",c:"Frontend",d:"Short description: what it does and which tech you used.",l:"#"},
- {t:"Hackathon Project",c:"Full Stack",d:"Short description: what it does and which tech you used.",l:"#"}
- /* add image: {t:"..",c:"..",d:"..",l:"https://github.com/..",img:"assets/p1.jpg"} */
+ {t:"MY VU",c:"Hackathon",when:"Robo Spark 1.0 · Varendra University · 29–30 July 2026",
+  d:"A smart campus app idea that puts university services in one place.",
+  long:"MY VU is a smart campus app idea made to make student life more modern, connected and convenient. It brings notices, class updates, bus schedules, academic information and other campus services into a single platform, with an AI assistant concept for quick support. My team and I presented it in the Idea Presentation segment of Robo Spark 1.0, organized by the RSVU Robotics Society (Department of CSE, Varendra University).",
+  role:"Team member, idea presentation",
+  feats:["Notices and class updates","Bus schedules and academic information","AI assistant concept for quick student support"],tech:[],live:"",git:""},
+ {t:"My DIU",c:"Hackathon",when:"DIU AI Hackathon 2026 · May 25 – July 11, 2026 · Final round",
+  d:"An AI-powered smart university app for students, admission candidates and authorities.",
+  long:"My DIU is an AI-powered smart university app that brings almost every essential university service into one platform. Team AI Hunter built it for the DIU AI Hackathon 2026 and reached the final round.",
+  role:"UI/UX Design and Frontend Development (Team AI Hunter)",
+  feats:["AI-powered DIU Assistant that answers student questions","AI study tools: summary, quiz generation, audio and video overview","Class routine, exam schedule, bus schedule and payment information","University news feed and hall updates","Results, department information and campus navigation","Admission candidate portal and authority portal"],tech:[],live:"",git:""},
+ {t:"Mohona",c:"Hackathon",when:"CSE Computing Club Hackathon 2026 · Varendra University · May 14, 2026",
+  d:"A one-stop games and entertainment platform with one-click subscriptions.",
+  long:"Mohona centralizes multiple gaming and entertainment services into a single dashboard and simplifies multi-platform subscription management with a one-click checkout. Team AI Hunters built it at the CSE Computing Club Hackathon 2026.",
+  role:"UI/UX Designer, Frontend Developer and Editor",
+  feats:["Single dashboard for gaming and entertainment services","One-click checkout for subscriptions","Engaging interface and responsive layout","High-quality visual content for the platform"],tech:[],live:"",git:""},
+ {t:"Open Voice",c:"Mobile",when:"UNDP & PTIB · August – September 2025",
+  d:"A mobile app that puts local budget transparency in citizens' hands.",
+  long:"Open Voice (Your Voice in Local Budget) is a mobile application designed to tackle local-level corruption by putting budget transparency directly into citizens' hands. I worked on it for two months as part of a project with UNDP and PTIB.",
+  role:"UI/UX Designer and Frontend Developer",
+  feats:["Anonymous reporting flow that protects citizen identity","Bilingual Bangla and English interface for rural inclusivity","Intuitive, secure design for all users"],tech:[],live:"",git:""}
+ /* add more: copy a block above. Optional screenshot: img:"assets/p1.jpg" */
 ];
 const SKILLS=[
  ["UI/UX Design","Wireframes, prototypes and clean interfaces.",["Figma","Wireframing","Prototyping","Usability"]],
@@ -201,7 +227,17 @@ $('#yr').textContent=new Date().getFullYear();
 $('#skg').innerHTML=SKILLS.map(s=>`<div class="box rv"><h3 class="d">${s[0]}</h3><p>${s[1]}</p><div class="tags">${s[2].map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('');
 const cats=['All',...new Set(PROJECTS.map(p=>p.c))];
 $('#fl').innerHTML=cats.map((c,i)=>`<button class="${i?'':'on'}" data-c="${c}">${c}</button>`).join('');
-$('#pg').innerHTML=PROJECTS.map(p=>`<article class="pj rv" data-c="${p.c}"><div class="th">${p.img?`<img src="${p.img}" alt="${p.t}" loading="lazy">`:p.t.split(' ').map(w=>w[0]).join('')}</div><div class="in"><h3 class="d">${p.t}</h3><p>${p.d}</p><a href="${p.l}" target="_blank" rel="noopener">View project</a></div></article>`).join('');
+$('#pg').innerHTML=PROJECTS.map((p,i)=>`<article class="pj rv" data-c="${p.c}" data-i="${i}" tabindex="0" role="button" aria-label="Open ${p.t} details"><div class="th">${p.img?`<img src="${p.img}" alt="${p.t}" loading="lazy">`:p.t.split(' ').map(w=>w[0]).join('')}</div><div class="in"><h3 class="d">${p.t}</h3><p>${p.d}</p><span class="vd">View details +</span></div></article>`).join('');
+const md=$('#md'),mc=$('#mc');let last;
+const ok=u=>u&&u!=='#';
+function openP(i){const p=PROJECTS[i];last=document.activeElement;
+mc.innerHTML=`${p.img?`<img class="mi" src="${p.img}" alt="${p.t}">`:''}<small class="acc">${p.c}</small><h3 class="d">${p.t}</h3>${p.when?`<p class="wh">${p.when}</p>`:''}<p>${p.long||p.d}</p>${p.role?`<h4>My role</h4><p>${p.role}</p>`:''}${p.feats&&p.feats.length?`<h4>Key features</h4><ul>${p.feats.map(f=>`<li>${f}</li>`).join('')}</ul>`:''}${p.tech&&p.tech.length?`<h4>Built with</h4><div class="tags">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div>`:''}<div class="mbtn">${ok(p.live)?`<a class="btn f" href="${p.live}" target="_blank" rel="noopener">Live demo</a>`:''}${ok(p.git)?`<a class="btn" href="${p.git}" target="_blank" rel="noopener">GitHub code</a>`:''}</div>`;
+md.hidden=false;document.body.style.overflow='hidden';$('#mx').focus()}
+function closeP(){md.hidden=true;document.body.style.overflow='';last&&last.focus()}
+$('#pg').addEventListener('click',e=>{const c=e.target.closest('.pj');c&&openP(c.dataset.i)});
+$('#pg').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const c=e.target.closest('.pj');if(c){e.preventDefault();openP(c.dataset.i)}}});
+$('#mx').onclick=closeP;md.addEventListener('click',e=>{if(e.target===md)closeP()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!md.hidden)closeP()});
 $('#fl').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#fl button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.pj').forEach(p=>p.classList.toggle('hide',b.dataset.c!=='All'&&p.dataset.c!==b.dataset.c))};
 const m=['Full Stack Developer','UI/UX Designer','Mobile App Developer','Problem Solver'];
 $('#mq').innerHTML=[...m,...m,...m,...m].map(x=>`<span>${x}</span><span>✦</span>`).join('');
